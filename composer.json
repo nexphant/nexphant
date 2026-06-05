@@ -1,0 +1,27 @@
+{
+  "name": "nexph/nexph",
+  "description": "The Nexph application skeleton.",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "nexph/framework": "^0.1",
+    "nexph/dev": "^0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "@php setup.php"
+    ],
+    "setup": "php setup.php",
+    "dev": "php nexph.dev.php",
+    "serve": "php app.php",
+    "dump": "composer dump-autoload -o"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

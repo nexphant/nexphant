@@ -1,0 +1,10 @@
+/vendor/
+/storage/*.sqlite
+/storage/*.sqlite-wal
+/storage/*.sqlite-shm
+/storage/logs/*
+/node_modules/
+/public/build/
+.env
+
+composer.lock
