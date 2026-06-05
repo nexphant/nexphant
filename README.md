@@ -6,10 +6,9 @@
 Modern PHP Runtime & Framework for Stateful Applications.
 </p>
 
-
 <p align="center">
     <a href="https://github.com/nexphlabs/nexph/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nexphlabs/nexph" alt="License"></a>
-    <a href="https://github.com/nexphlabs/nexph"><img src="https://img.shields.io/github/actions/workflow/status/nexphlabs/nexph/tests.yml" alt="Build"></a>
+    <a href="https://github.com/nexphlabs/nexph"><img src="https://img.shields.io/badge/GitHub-nexphlabs%2Fnexph-181717?logo=github" alt="GitHub"></a>
 </p>
 
 ---
