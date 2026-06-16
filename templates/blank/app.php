@@ -2,14 +2,14 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Nexph\App;
-use Nexph\Request;
+use Nexphant\App;
+use Nexphant\Request;
 
 $app = App::create();
 
 $app->get('/', function (Request $request) {
     return [
-        'name' => 'Nexph',
+        'name' => 'Nexphant',
         'status' => 'running',
     ];
 });

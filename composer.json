@@ -1,12 +1,12 @@
 {
-  "name": "nexph/nexph",
-  "description": "The Nexph application skeleton.",
+  "name": "nexphant/nexphant",
+  "description": "The Nexphant application skeleton.",
   "type": "project",
   "license": "MIT",
   "require": {
     "php": "^8.1",
-    "nexph/framework": "^0.0",
-    "nexph/dev": "^0.0"
+    "nexphant/framework": "^0.0",
+    "nexphant/dev": "^0.0"
   },
   "autoload": {
     "psr-4": {

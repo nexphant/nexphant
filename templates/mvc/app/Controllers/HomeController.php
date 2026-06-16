@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-use Nexph\Request;
-use Nexph\Route;
-use Nexph\Get;
-use Nexph\View\ViewResponse;
+use Nexphant\Request;
+use Nexphant\Route;
+use Nexphant\Get;
+use Nexphant\View\ViewResponse;
 
 #[Route('/')]
 class HomeController
@@ -14,7 +14,7 @@ class HomeController
     public function index(): ViewResponse
     {
         return view('home', [
-            'title' => 'Welcome to Nexph',
+            'title' => 'Welcome to Nexphant',
         ]);
     }
 }

@@ -2,13 +2,13 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Nexph\App;
+use Nexphant\App;
 use App\Controllers\ApiController;
 
 $app = App::create();
 
 $app->get('/', fn () => [
-    'name' => 'Nexph API',
+    'name' => 'Nexphant API',
     'status' => 'running',
 ]);
 

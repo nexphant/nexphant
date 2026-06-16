@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => $_ENV['APP_NAME'] ?? 'Nexph',
+    'name' => $_ENV['APP_NAME'] ?? 'Nexphant',
     'env' => $_ENV['APP_ENV'] ?? 'local',
     'debug' => filter_var($_ENV['APP_DEBUG'] ?? true, FILTER_VALIDATE_BOOL),
     'host' => $_ENV['APP_HOST'] ?? '0.0.0.0',

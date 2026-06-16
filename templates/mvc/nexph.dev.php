@@ -2,7 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Nexph\Reload;
+use Nexphant\Reload;
 
 Reload::run(
     command: 'php app.php',

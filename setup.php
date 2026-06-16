@@ -7,7 +7,7 @@ $root = __DIR__;
 $templates = [
     'blank' => [
         'title' => 'Blank',
-        'description' => 'Minimal Nexph app',
+        'description' => 'Minimal Nexphant app',
     ],
     'api' => [
         'title' => 'API',
@@ -36,18 +36,18 @@ clearScreen();
 
 line();
 echo $c['cyan'] . $c['bold'];
-echo " _   _                 _     \n";
-echo "| \\ | | _____  ___ __ | |__  \n";
-echo "|  \\| |/ _ \\ \\/ / '_ \\| '_ \\ \n";
-echo "| |\\  |  __/>  <| |_) | | | |\n";
-echo "|_| \\_|\\___/_/\\_\\ .__/|_| |_|\n";
-echo "                 |_|         \n";
+echo " _   _                 _                 _   \n";
+echo "| \\ | | _____  ___ __ | |__   __ _ _ __ | |_ \n";
+echo "|  \\| |/ _ \\ \\/ / '_ \\| '_ \\ / _` | '_ \\| __|\n";
+echo "| |\\  |  __/>  <| |_) | | | | (_| | | | | |_ \n";
+echo "|_| \\_|\\___/_/\\_\\ .__/|_| |_|\\__,_|_| |_|\\__|\n";
+echo "                 |_|                         \n";
 echo $c['reset'];
 echo $c['dim'] . "Modern PHP Runtime & Framework for Stateful Applications." . $c['reset'] . PHP_EOL;
 line();
 
 echo PHP_EOL;
-echo $c['bold'] . "Welcome to Nexph." . $c['reset'] . PHP_EOL;
+echo $c['bold'] . "Welcome to Nexphant." . $c['reset'] . PHP_EOL;
 echo $c['dim'] . "Choose a starter template to initialize your project." . $c['reset'] . PHP_EOL . PHP_EOL;
 
 $template = chooseTemplate($templates, $c);
@@ -78,7 +78,7 @@ if (file_exists($root . '/composer.json')) {
     passthru('composer dump-autoload -o');
 }
 
-if (getenv('NEXPH_KEEP_SETUP') !== '1') {
+if (getenv('NEXPHANT_KEEP_SETUP') !== '1') {
     step("Cleaning installer files", $c);
     removeDirectory($root . '/templates');
     @unlink($root . '/setup.php');
@@ -86,7 +86,7 @@ if (getenv('NEXPH_KEEP_SETUP') !== '1') {
 
 echo PHP_EOL;
 success(strtoupper($template) . " template installed", $c);
-success("Nexph project ready", $c);
+success("Nexphant project ready", $c);
 
 echo PHP_EOL;
 box([
@@ -94,7 +94,7 @@ box([
     '',
     $c['cyan'] . 'composer run dev' . $c['reset'],
     '',
-    $c['dim'] . 'Your app will start with Nexph dev reload.' . $c['reset'],
+    $c['dim'] . 'Your app will start with Nexphant dev reload.' . $c['reset'],
 ], $c);
 
 echo PHP_EOL;

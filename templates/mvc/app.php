@@ -2,7 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Nexph\App;
+use Nexphant\App;
 use App\Controllers\HomeController;
 
 $app = App::create();

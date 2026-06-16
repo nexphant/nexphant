@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/nexphlabs/.github/refs/heads/main/nexph-logo.png" width="220" alt="Nexph Logo">
+    <img src="https://raw.githubusercontent.com/nexphant/.github/refs/heads/main/nexphant-logo.png" width="220" alt="Nexphant Logo">
 </p>
 
 <p align="center">
@@ -7,15 +7,15 @@ Modern PHP Runtime & Framework for Stateful Applications.
 </p>
 
 <p align="center">
-    <a href="https://github.com/nexphlabs/nexph/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nexphlabs/nexph" alt="License"></a>
-    <a href="https://github.com/nexphlabs/nexph"><img src="https://img.shields.io/badge/GitHub-nexphlabs%2Fnexph-181717?logo=github" alt="GitHub"></a>
+    <a href="https://github.com/nexphant/nexphant/blob/main/LICENSE"><img src="https://img.shields.io/github/license/nexphant/nexphant" alt="License"></a>
+    <a href="https://github.com/nexphant/nexphant"><img src="https://img.shields.io/badge/GitHub-nexphant%2Fnexphant-181717?logo=github" alt="GitHub"></a>
 </p>
 
 ---
 
-## About Nexph
+## About Nexphant
 
-Nexph is a modern PHP runtime and framework built for high-performance, stateful, and long-running applications.
+Nexphant is a modern PHP runtime and framework built for high-performance, stateful, and long-running applications.
 
 It brings a runtime-first architecture to PHP, combining persistent workers, fiber-based concurrency, background processing, runtime ownership, resource tracking, cancellation, graceful drain, and built-in observability into a simple developer experience.
 
@@ -23,11 +23,11 @@ Inspired by Node.js flexibility, Go-style services, Rust-like ownership ideas, a
 
 ---
 
-## Why Nexph?
+## Why Nexphant?
 
 Traditional PHP applications restart the lifecycle on every request.
 
-Nexph introduces a persistent runtime architecture that enables:
+Nexphant introduces a persistent runtime architecture that enables:
 
 - Lower latency
 - Better throughput
@@ -42,9 +42,9 @@ All while keeping the simplicity developers love from PHP.
 
 ## Runtime Safety Model
 
-Nexph is not only an HTTP framework. It is built around a modern runtime safety model inspired by systems such as Go, Rust, and structured concurrency runtimes.
+Nexphant is not only an HTTP framework. It is built around a modern runtime safety model inspired by systems such as Go, Rust, and structured concurrency runtimes.
 
-Nexph introduces runtime-level primitives to make long-running PHP applications safer and easier to control.
+Nexphant introduces runtime-level primitives to make long-running PHP applications safer and easier to control.
 
 ### Ownership Model
 
@@ -58,7 +58,7 @@ Every important runtime execution unit can have an owner:
 - Scheduler task
 - Runtime resource
 
-This allows Nexph to understand which task owns which resource, making cleanup and debugging much easier.
+This allows Nexphant to understand which task owns which resource, making cleanup and debugging much easier.
 
 ```txt
 request
@@ -79,13 +79,13 @@ Resources can be tied to their owner, including:
 * channels
 * runtime tasks
 
-When an owner is closed, Nexph can release related resources automatically.
+When an owner is closed, Nexphant can release related resources automatically.
 
 This helps reduce common long-running process issues such as leaked connections, orphan timers, and dangling tasks.
 
 ### Cancellation & Deadline
 
-Nexph supports cancellation and deadline primitives for runtime tasks.
+Nexphant supports cancellation and deadline primitives for runtime tasks.
 
 This enables:
 
@@ -95,11 +95,11 @@ This enables:
 * graceful worker shutdown
 * deadline-aware sleep/channel operations
 
-Instead of letting tasks run forever, Nexph gives the runtime a way to stop work safely.
+Instead of letting tasks run forever, Nexphant gives the runtime a way to stop work safely.
 
 ### Graceful Drain
 
-Nexph includes a centralized graceful drain mechanism.
+Nexphant includes a centralized graceful drain mechanism.
 
 During shutdown or reload, the runtime can:
 
@@ -109,11 +109,11 @@ During shutdown or reload, the runtime can:
 4. release owned resources
 5. stop the worker safely
 
-This makes Nexph suitable for persistent workers and long-running services.
+This makes Nexphant suitable for persistent workers and long-running services.
 
 ### Runtime Observability
 
-Nexph includes runtime-aware observability primitives:
+Nexphant includes runtime-aware observability primitives:
 
 * trace id
 * span id
@@ -178,7 +178,7 @@ This makes debugging long-running PHP applications more predictable.
 ## Installation
 
 ```bash
-composer create-project nexph/nexph my-app
+composer create-project nexphant/nexphant my-app
 ```
 
 Run the development server:
@@ -210,14 +210,14 @@ http://127.0.0.1:8000
 ```php
 <?php
 
-use Nexph\App;
-use Nexph\Request;
+use Nexphant\App;
+use Nexphant\Request;
 
 $app = App::create();
 
 $app->get('/', function (Request $request) {
     return [
-        'name' => 'Nexph',
+        'name' => 'Nexphant',
         'message' => 'Hello World',
     ];
 });
@@ -232,8 +232,8 @@ $app->listen(port: 8080);
 ```php
 <?php
 
-use Nexph\Route;
-use Nexph\Get;
+use Nexphant\Route;
+use Nexphant\Get;
 
 #[Route('/api')]
 class UserController
@@ -242,7 +242,7 @@ class UserController
     public function index(): array
     {
         return [
-            ['id' => 1, 'name' => 'nexph'],
+            ['id' => 1, 'name' => 'nexphant'],
         ];
     }
 }
@@ -273,7 +273,7 @@ $app->middleware(function ($request, $next) {
 ```php
 <?php
 
-use Nexph\Queue\Queue;
+use Nexphant\Queue\Queue;
 
 Queue::push(function () {
     // Background task
@@ -284,7 +284,7 @@ Queue::push(function () {
 
 ## Project Philosophy
 
-Nexph focuses on:
+Nexphant focuses on:
 
 * Performance without complexity
 * Modern runtime architecture
@@ -299,7 +299,7 @@ We believe PHP can evolve beyond the traditional request-response lifecycle.
 
 ## Benchmarks
 
-Nexph is designed with performance-first architecture:
+Nexphant is designed with performance-first architecture:
 
 * Fiber-based execution
 * Persistent workers
@@ -318,14 +318,14 @@ Documentation is currently in active development.
 Soon available at:
 
 ```txt
-https://nexph.dev
+https://nexphant.dev
 ```
 
 ---
 
 ## Contributing
 
-Thank you for considering contributing to Nexph.
+Thank you for considering contributing to Nexphant.
 
 Please feel free to submit issues, discussions, and pull requests.
 
@@ -333,10 +333,10 @@ Please feel free to submit issues, discussions, and pull requests.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Nexph, please send an email to:
+If you discover a security vulnerability within Nexphant, please send an email to:
 
 ```txt
-foundation@nexph.dev
+foundation@nexphant.dev
 ```
 
 All security vulnerabilities will be promptly addressed.
@@ -345,4 +345,4 @@ All security vulnerabilities will be promptly addressed.
 
 ## License
 
-Nexph is open-sourced software licensed under the MIT license.
+Nexphant is open-sourced software licensed under the MIT license.

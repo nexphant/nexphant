@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-use Nexph\Request;
-use Nexph\Route;
-use Nexph\Get;
-use Nexph\Post;
+use Nexphant\Request;
+use Nexphant\Route;
+use Nexphant\Get;
+use Nexphant\Post;
 
 #[Route('/api')]
 class ApiController
@@ -15,7 +15,7 @@ class ApiController
     {
         return [
             'ok' => true,
-            'runtime' => 'nexph',
+            'runtime' => 'nexphant',
         ];
     }
 

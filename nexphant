@@ -3,7 +3,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Nexph\Console\Console;
+use Nexphant\Console\Console;
 
 $console = new Console();
 exit($console->run($argv));
