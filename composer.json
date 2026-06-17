@@ -18,7 +18,7 @@
       "@php setup.php"
     ],
     "setup": "php setup.php",
-    "dev": "php nexph.dev.php",
+    "dev": "php nexphant.dev.php",
     "serve": "php app.php",
     "dump": "composer dump-autoload -o"
   },
