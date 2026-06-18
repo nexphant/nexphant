@@ -14,7 +14,7 @@ $templates = [
         'description' => 'REST API starter',
     ],
     'mvc' => [
-        'title' => 'MVC',
+        'title' => 'Starter',
         'description' => 'Controller + view starter',
     ],
 ];

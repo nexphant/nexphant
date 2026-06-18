@@ -1,3 +1,0 @@
-<?php
-
-// Additional routes here

@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/nexphant/.github/refs/heads/main/nexphant-logo.png" width="220" alt="Nexphant Logo">
 </p>
@@ -71,13 +73,13 @@ request
 
 Resources can be tied to their owner, including:
 
-* database connections
-* Redis connections
-* sockets
-* file handles
-* timers
-* channels
-* runtime tasks
+- database connections
+- Redis connections
+- sockets
+- file handles
+- timers
+- channels
+- runtime tasks
 
 When an owner is closed, Nexphant can release related resources automatically.
 
@@ -89,11 +91,11 @@ Nexphant supports cancellation and deadline primitives for runtime tasks.
 
 This enables:
 
-* cooperative task cancellation
-* request timeout control
-* queue job timeout control
-* graceful worker shutdown
-* deadline-aware sleep/channel operations
+- cooperative task cancellation
+- request timeout control
+- queue job timeout control
+- graceful worker shutdown
+- deadline-aware sleep/channel operations
 
 Instead of letting tasks run forever, Nexphant gives the runtime a way to stop work safely.
 
@@ -115,16 +117,16 @@ This makes Nexphant suitable for persistent workers and long-running services.
 
 Nexphant includes runtime-aware observability primitives:
 
-* trace id
-* span id
-* owner id
-* owner type
-* worker id
-* job id
-* active fiber metrics
-* suspended fiber tracking
-* resource leak reporting
-* runtime doctor checks
+- trace id
+- span id
+- owner id
+- owner type
+- worker id
+- job id
+- active fiber metrics
+- suspended fiber tracking
+- resource leak reporting
+- runtime doctor checks
 
 This makes debugging long-running PHP applications more predictable.
 
@@ -194,7 +196,7 @@ Or manually:
 ```bash
 cd my-app
 
-php nexph.dev.php
+php nexphant.dev.php
 ```
 
 Your application will be available at:
@@ -286,12 +288,12 @@ Queue::push(function () {
 
 Nexphant focuses on:
 
-* Performance without complexity
-* Modern runtime architecture
-* Simple APIs
-* Scalable systems
-* Minimal overhead
-* Excellent developer experience
+- Performance without complexity
+- Modern runtime architecture
+- Simple APIs
+- Scalable systems
+- Minimal overhead
+- Excellent developer experience
 
 We believe PHP can evolve beyond the traditional request-response lifecycle.
 
@@ -301,11 +303,11 @@ We believe PHP can evolve beyond the traditional request-response lifecycle.
 
 Nexphant is designed with performance-first architecture:
 
-* Fiber-based execution
-* Persistent workers
-* Lightweight routing
-* Efficient memory usage
-* Minimal bootstrap overhead
+- Fiber-based execution
+- Persistent workers
+- Lightweight routing
+- Efficient memory usage
+- Minimal bootstrap overhead
 
 Benchmarks may vary depending on hardware and workloads.
 

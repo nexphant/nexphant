@@ -8,7 +8,7 @@ Reload::run(
     command: 'php app.php',
     watch: [
         'app.php',
-        'nexph.dev.php',
+        'nexphant.dev.php',
         'composer.json',
         '.env',
         'app',
