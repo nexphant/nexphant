@@ -14,7 +14,7 @@ class HomeController
     public function index(): ViewResponse
     {
         return view('home', [
-            'title' => 'Welcome to Nexphant',
+            'title' => 'Nexphant',
         ]);
     }
 }
